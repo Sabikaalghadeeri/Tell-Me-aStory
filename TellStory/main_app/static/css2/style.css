@@ -2,7 +2,6 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-color: red;
   }
   
   main {
@@ -14,6 +13,6 @@ body {
     text-align: right;
   }
 
-  .titlenav {
-    color: rgb(27, 31, 31) darken-4;
+  .title {
+    color: rgb(17, 24, 24);
   }

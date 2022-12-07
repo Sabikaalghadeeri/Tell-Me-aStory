@@ -1,0 +1,17 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<p>{{ story_title }}</p>
+<audio controls>
+    <source src="{% static '/' %}{{story_title}}" type="audio/mpeg">
+</audio> 
+
+<p>{{ book }}</p>
+
+
+{% endblock %}
+

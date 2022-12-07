@@ -8,19 +8,22 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Tell Story 🪶</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css2/style.css' %}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 <body>
   <header class="navbar-fixed">
     <nav>
-      <div class="nav-wrapper">
+      <div class="nav-wrapper teal lighten-4">
         <ul>
           <li><a href="/" class="left brand-logo">&nbsp;&nbsp;TellStory</a></li>
         </ul>
-        <ul class="right">
+        <ul class="right orange lighten-3">
           <li><a href="/about">About</a></li>
-          <li><a href="/favorite">Favorite Stories</a></li>
-          <li><a href="/ownstory">My own Story</a></li>
+          <li><a href="{% url 'allstories' %}">View All Stories</a></li>
+          <li><a href="{% url 'favorite' %}">Favorite Stories</a></li>
+          <li><a href="{% url 'ownstory_create' %}">Add Your Story</a></li>
+          <li><a href="/ownstory">My Own Stories</a></li>
         </ul>
       </div>
     </nav>
@@ -29,7 +32,7 @@
     {% block content %}
     {% endblock %}
   </main>
-  <footer class="page-footer">
+  <footer class="page-footer teal lighten-4">
     <div class="right">Children are our most valuable resource💗.&nbsp;</div>
   </footer>
 </body>
