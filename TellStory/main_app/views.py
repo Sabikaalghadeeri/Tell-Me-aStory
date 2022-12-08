@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import OwnStory, StoryTitle
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -115,7 +115,7 @@ def signup(request):
       user = form.save()
       # This is how we log a user in via code
       login(request, user)
-      return redirect('index')
+      return redirect('/about')
     else:
       error_message = 'Invalid sign up - try again'
   # A bad POST or a GET request, so render signup.html with an empty form

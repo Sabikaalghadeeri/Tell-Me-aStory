@@ -4,16 +4,16 @@
 <h1>My Own Story List</h1>
 {% comment %} <pre> {{my_List}}</pre> {% endcomment %}
 {% for ownstory in myList %}
-<div class = "card">
-    <a href = "{% url 'detail' ownstory.id %}">
-    <div class = "card-content">
-        <span class = 'card-title'>{{ownstory.username}}</span> 
-        <p>Title: {{ ownstory.title }}</p>
-        <p>Your Story: {{ ownstory.story }}</p>
-        <p>Story Cover: {{ ownstory.cover }}</p>
-        <p>Published Date: {{ ownstory.published }}</p>
+<a href = "{% url 'detail' ownstory.id %}">
+    <div class = "card list">
+        <div class = "card-content">
+            <span class = 'card-title'>{{ownstory.username}}</span> 
+            <p>Title: {{ ownstory.title }}</p>
+            <p>Your Story: {{ ownstory.story }}</p>
+            <p>Story Cover: {{ ownstory.cover }}</p>
+            <p>Published Date: {{ ownstory.published }}</p>
+        </div>
     </div>
-
     {% endfor %}
 
 {% endblock %}

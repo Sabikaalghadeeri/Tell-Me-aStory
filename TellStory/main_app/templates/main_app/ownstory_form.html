@@ -2,18 +2,20 @@
 
 {% block content %}
 
-<form action= "" method="POST">
-    {% comment %} security measure for using FORMS {% endcomment %}
-    {% csrf_token %}
-
-    <table>
-
-        {{ form.as_table }}
-
-    </table>
-
-    <input type="submit" value="Submit!" class="btn orange lighten-3">
-
-</form>
+<div class="ownstory-form"> 
+    <form action= "" method="POST">
+        {% comment %} security measure for using FORMS {% endcomment %}
+        {% csrf_token %}
+    
+        <table>
+    
+            {{ form.as_table }}
+    
+        </table>
+    
+        <input type="submit" value="Submit!" class="btn orange lighten-3">
+    
+    </form>
+</div>
 
 {% endblock %}

@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
@@ -12,8 +12,5 @@ urlpatterns = [
     path('ownstory/<int:pk>/update/', views.OwnStoryUpdate.as_view(), name= 'ownstory_update'),
     path('ownstory/<int:pk>/delete/', views.OwnStoryDelete.as_view(), name= 'ownstory_delete'),
     path('listen/<str:story_title>/', views.listen, name='listen_story'),
-    path('admin/', admin.site.urls),
-    path('', include('main_app.urls')),
-    path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/signup/', views.signup, name='signup')
 ]
