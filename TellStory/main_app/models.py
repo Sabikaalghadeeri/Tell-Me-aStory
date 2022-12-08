@@ -1,7 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from datetime import date
-# Create your models here.
+from django.contrib.auth.models import User
 
 
 class OwnStory(models.Model):
@@ -11,6 +11,7 @@ class OwnStory(models.Model):
     cover = models.TextField(max_length=150, default="null")
     # published = models.IntegerField()
     published_date = models.DateField()
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     
     def __str__(self):
         return self.username

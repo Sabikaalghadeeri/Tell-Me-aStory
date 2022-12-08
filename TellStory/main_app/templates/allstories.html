@@ -11,12 +11,13 @@
     <div class="col s12 m7">
       <div class="card">
         <div class="card-image">
-          <img src="images/sample-1.jpg">
-          <span class="card-title">{{ story.title }}</span>
+          <img src="{{ story.cover }}">
+          {% comment %} <span class="card-title">{{ story.title }}</span> {% endcomment %}
         </div>
         <div class="card-content">
-              <p>{{ story.title }}</p>
-              <p>Description of story</p>
+              <h5>{{ story.title }}</h5>
+              <h6>Description of story:</h6>
+              <p>{{story.description}}</p>
         </div>
         <div class="card-action">
           <a href="/listen/{{ story.title }}">Listen!</a>
